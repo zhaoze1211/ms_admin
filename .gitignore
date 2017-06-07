@@ -1,0 +1,8 @@
+dist
+dist2
+node_modules
+bower_components
+.idea
+*.swp
+.DS_Store
+.DS_Store?
