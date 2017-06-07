@@ -1,0 +1,45 @@
+@import "../common/var.less";
+
+.friends-list-wrap {
+    .friends-list-con {
+        line-height: 40px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 16px;
+            background-color: #fff;
+        }
+        /*定义滚动条的轨道，内阴影及圆角*/
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        /*定义滑块，内阴影及圆角*/
+        &::-webkit-scrollbar-thumb {
+            /*width: 10px;*/
+            height: 20px;
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+            background-color: #ccc;
+        }
+        .mg-left-right{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .cf:hover{
+            background-color: #f0f1f3;
+        }
+        .cf:after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .friends-left {
+            float: left;
+        }
+        .friends-right {
+            float: right;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+component:
+x-card
+
+about:
+  图文列表  竖排
+  
+author:
+ ice-yy
+  
+  
+  
+  props: [
+      'id',
+      'title',
+      'coverUrl',
+      'imgUrl',
+      'priceMoney',
+      'priceText',
+      'graytitle',
+      'grayText',
+      'fansnum',
+      'secondLeft',
+      'secondRight',
+      'tag',
+      'type',
+      'adStatus',
+      'activityEndTime',
+      'activityStartTime',
+      'officialid'
+    ],
+  
+  
+  
+  
+  
+  
++ Attributes
+
+      'title',           // 图片下面的第一行文字，如果传了title,则显示，固定高度是2行，
+      'coverUrl',       // 此参数的图片是3/4的规格，自动计算的  
+      'imgUrl',        // 此参数的图片是正方形的    
+      'priceMoney',   //  此参数是： ￥5.00  这个模式  
+      'priceText',   //   如果不需要上面带￥的字段，则用此参数 
+      'grayText',    //   灰色的字体   此参数是时间参数的反体
+      'fansnum',     // 此参数是：5000粉丝    如果不需要粉丝2字，则用secondLeft  
+      'secondLeft', 
+      'tag',         // 此参数是：|标签    如果不需要‘|’，则用secondRight 
+      'secondRight'
+      'type',       // 按钮颜色
+      'adStatus',   // 按钮文字   按钮大小是，block  type='disabled'则是禁用状态
+      'activityEndTime',    // 开始时间          返回的是：     活动日期 2016
+      'activityStartTime',  // ~ 结束时间
+      'officialid'    // 加粗字体
+      'color'  // 时间那一栏，字体可定制      red--红色       gray--灰色
+      'graytitle'='到期时间：'      // 这个是时间前面的title  例如--到期时间：2016年10月
+      
+      
+                文字下方，也可支持在页面传入button,组件里有slot
+      
+      
+      <div slot="imgbtncenter">
+        <el-button type='xv'>&nbsp;转让&nbsp;</el-button></el-col>
+      </div>                     // 图片正中央支持自定义按钮   页面上传了，则有，不传，则没有
+      
+      
+
++ 示例
+<template>
+  <div>
+    <el-row :gutter="20">
+          <el-col :span="4" v-for="(o, index) in list">
+            <x-card 
+                :id='o.id' 
+                :imgUrl='o.coverUrl' 
+                priceText='谁删除了我' 
+                fansnum='看通讯录里那些人删除了我' 
+                grayText='49元 / 月' 
+                adStatus='立即订购'
+                type='info'
+                @btnhander='btnhander'>
+            </x-card>
+          </el-col>
+        </el-row>
+      </div>
+  </div>
+</template>
+
+
+
+其他示例，可以参考VKT的list页面  或者PC端的myrobot页面
+
+@btnhander='btnhander'  按钮的回调  （id和按钮文字）

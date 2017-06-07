@@ -1,0 +1,45 @@
+component:
+Choose 左右切换
+
+about:
+  左右切换
+  
+author:
+ ice-zz
+  
+  
+Attributes
+
+参数		说明		类型	可选值	默认值	
+groupData	要显示的数据	Array	-	—
+leftH		左侧高度	string	-	—
+rightH		右侧高度	string	—	-
+sendGroup	默认显示的数据	Array	—	-
+
+
+
+
+Event
+
+事件名称	说明		回调参数	
+all		全选事件	-
+add		添加事件	-
+del		移除事件	obj:当前对象，index：当前索引
+clear		清除事件	-
+value		当前选择的值	arry：当前选择的值，数组类型
+
+
+
++ 示例
+<template>
+  <div>
+    <r-choose :groupData="groupList"
+                          leftH="250px"
+                          rightH="300px"
+                          @all="allClick"
+                          @add="addClick"
+                          @del="delClick"
+                          @clear="clearClick"
+                          @value="getArry"></r-choose>
+  </div>
+</template>

@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@import "../common/var.less";
+.el-tag {
+    background-color: #8492a6;
+    display: inline-block;
+    padding: 0 5px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid #8492a6;
+}
+.taglist .el-tag {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.el-tag .el-icon-close {
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-transform: scale(.75,.75);
+    transform: scale(.75,.75);
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    vertical-align: middle;
+    top: -1px;
+    right: -2px;
+}
+.el-tag .el-icon-close:hover {
+    background-color: #fff;
+    color: #8492a6;
+}
+.el-tag.is-hit {
+    border-color: @color-primary;
+}
+.el-tag--gray {
+    background-color: #e5e9f2;
+    border-color: #e5e9f2;
+    color: #475669;
+}
+.el-tag--gray .el-tag__close:hover {
+    background-color: #475669;
+    color: #fff;
+}
+.el-tag--primary {
+    background-color: rgba(32,159,255,.1);
+    border-color: rgba(32,159,255,.2);
+    color: @color-primary;
+}
+.el-tag--primary .el-tag__close:hover {
+    background-color: @color-primary;
+    color: #fff;
+}
+.el-tag--success {
+    background-color: rgba(18,206,102,.1);
+    border-color: rgba(18,206,102,.2);
+    color: @color-success;
+}
+.el-tag--success .el-tag__close:hover {
+    background-color: @color-success;
+    color: #fff;
+}
+.el-tag--warning {
+    background-color: rgba(247,186,41,.1);
+    border-color: rgba(247,186,41,.2);
+    color: @color-warning;
+}
+.el-tag--warning .el-tag__close:hover {
+    background-color: @color-warning;
+    color: #fff;
+}
+.el-tag--danger {
+    background-color: rgba(255,73,73,.1);
+    border-color: rgba(255,73,73,.2);
+    color: @color-danger;
+}
+.el-tag--danger .el-tag__close:hover {
+    background-color: @color-danger;
+    color: #fff;
+}

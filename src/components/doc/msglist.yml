@@ -1,0 +1,38 @@
+component:
+msgList 消息组件
+
+about:
+  消息
+  
+author:
+ ice-zz
+  
+  
+Attributes
+
+参数		说明			类型		可选值		默认值	
+chat		是否是聊天模式		Boolean		-		false
+chatRecord	聊天记录数据		Array		-		—
+height		窗口高度		String		—		-
+send		监听发送消息的对象	Object		isself:0或者1,显示在左侧或右侧；msgtype：1-文本消息；3-图片消息；34-语音消息；62-视频消息	-
+flock		是否显示回复按钮	Boolean		—		false
+hideMore	是否显示更多按钮	Boolean		—		true
+
+
+Event
+
+事件名称	说明			回调参数	
+huifu		回复按钮点击事件	obj:当前的消息对象
+insert		插入聊天记录		-
+other-click	对方头像点击事件	obj:当前的消息对象
+me-click	我的头像点击事件	obj:当前的消息对象
+
+
+
+
++ 示例
+<template>
+  <div>
+    <r-msg-list :record="record" height="500px"></r-msg-list>
+  </div>
+</template>

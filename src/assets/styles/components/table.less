@@ -1,0 +1,377 @@
+@charset "UTF-8";
+@import "../common/var.less";
+.el-table {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  background-color: #fff;
+  border: 1px solid #e0e6ed;
+  font-size: 14px;
+  color: #1f2d3d
+}
+
+.el-table .el-tooltip,
+.el-table .el-tooltip__rel {
+  display: block
+}
+
+.el-table td,
+.el-table th {
+  height: 40px;
+  min-width: 0;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  position: relative
+}
+
+.el-table::after,
+.el-table::before {
+  content: '';
+  position: absolute;
+  background-color: #e0e6ed;
+  z-index: 1
+}
+
+.el-table td.is-right,
+.el-table th.is-right {
+  text-align: right
+}
+
+.el-table td.is-left,
+.el-table th.is-left {
+  text-align: left
+}
+
+.el-table td.is-center,
+.el-table th.is-center {
+  text-align: center
+}
+
+.el-table td,
+.el-table th.is-leaf {
+  border-bottom: 1px solid #e0e6ed
+}
+
+.el-table td.gutter,
+.el-table th.gutter {
+  width: 15px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  padding: 0
+}
+
+.el-table .cell,
+.el-table th>div {
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  padding-left: 18px;
+  padding-right: 18px
+}
+
+.el-table td.is-hidden>*,
+.el-table th.is-hidden>* {
+  visibility: hidden
+}
+
+.el-table::before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px
+}
+
+.el-table::after {
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%
+}
+
+.el-table .caret-wrapper,
+.el-table th>.cell {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block
+}
+
+.el-table th {
+  overflow: hidden;
+  background-color: #EFF2F7;
+  text-align: left
+}
+
+.el-table th>div {
+  display: inline-block;
+  line-height: 40px;
+  overflow: hidden
+}
+
+.el-table td>div {
+  box-sizing: border-box
+}
+
+.el-table th.required>div::before {
+  display: inline-block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff4d51;
+  margin-right: 5px;
+  vertical-align: middle
+}
+
+.el-table th>.cell {
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  line-height: 20px;
+  width: 100%;
+  box-sizing: border-box
+}
+
+.el-table th>.cell.highlight {
+  color: #20a0ff
+}
+
+.el-table .caret-wrapper {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: -2px;
+  width: 16px;
+  height: 34px;
+  overflow: visible;
+  overflow: initial
+}
+
+.el-table .cell,
+.el-table__header-wrapper {
+  overflow: hidden
+}
+
+.el-table .sort-caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 0;
+  content: "";
+  position: absolute;
+  left: 3px;
+  z-index: 2
+}
+
+.el-table .sort-caret.ascending,
+.el-table .sort-caret.descending {
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent
+}
+
+.el-table .sort-caret.ascending {
+  top: 11px;
+  border-top: none;
+  border-bottom: 5px solid #99a9bf
+}
+
+.el-table .sort-caret.descending {
+  bottom: 11px;
+  border-top: 5px solid #99a9bf;
+  border-bottom: none
+}
+
+.el-table .ascending .sort-caret.ascending {
+  border-bottom-color: #475669
+}
+
+.el-table .descending .sort-caret.descending {
+  border-top-color: #475669
+}
+
+.el-table td.gutter {
+  width: 0
+}
+
+.el-table .cell {
+  white-space: normal;
+  word-break: break-all;
+  line-height: 24px
+}
+
+.el-table tr input[type=checkbox] {
+  margin: 0
+}
+
+.el-table tr {
+  background-color: #fff
+}
+
+.el-table .hidden-columns {
+  visibility: hidden;
+  position: absolute;
+  z-index: -1
+}
+
+.el-table__empty-block {
+  position: relative;
+  min-height: 60px;
+  text-align: center;
+  width: 100%;
+  height: 100%
+}
+
+.el-table__empty-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #5e6d82
+}
+
+.el-table__fixed-header-wrapper thead div,
+.el-table__header-wrapper thead div {
+  color: #1f2d3d;
+  background-color: #EFF2F7
+}
+
+.el-table--fit {
+  border-right: 0;
+  border-bottom: 0
+}
+
+.el-table--border th,
+.el-table__fixed-right-patch {
+  border-bottom: 1px solid #e0e6ed
+}
+
+.el-table--fit td.gutter,
+.el-table--fit th.gutter {
+  border-right-width: 1px
+}
+
+.el-table--border td,
+.el-table--border th {
+  border-right: 1px solid #e0e6ed
+}
+
+.el-table__fixed,
+.el-table__fixed-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 0 8px #d3d4d6;
+  overflow-x: hidden
+}
+
+.el-table__fixed-right::before,
+.el-table__fixed::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e0e6ed;
+  z-index: 4
+}
+
+.el-table__fixed-right-patch {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  background-color: #EFF2F7
+}
+
+.el-table__fixed-right {
+  top: 0;
+  left: auto;
+  right: 0;
+  box-shadow: -1px 0 8px #d3d4d6
+}
+
+.el-table__fixed-right .el-table__fixed-body-wrapper,
+.el-table__fixed-right .el-table__fixed-header-wrapper {
+  left: auto;
+  right: 0
+}
+
+.el-table__fixed-header-wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3
+}
+
+.el-table__fixed-body-wrapper {
+  position: absolute;
+  left: 0;
+  top: 37px;
+  overflow: hidden;
+  z-index: 3
+}
+
+.el-table__body-wrapper,
+.el-table__header-wrapper {
+  width: 100%
+}
+
+.el-table__body,
+.el-table__header {
+  table-layout: fixed
+}
+
+.el-table__body-wrapper {
+  overflow: auto;
+  position: relative
+}
+
+.el-table--striped .el-table__body tr:nth-child(2n) td {
+  background: #FAFAFA
+}
+
+.el-table--striped .el-table__body tr:nth-child(2n).current-row td {
+  background: #EFF7FF
+}
+
+.el-table__body tr.hover-row>td {
+  background-color: #eff2f7
+}
+
+.el-table__body tr.current-row>td {
+  background: #eff7ff
+}
+
+.el-table__column-resize-proxy {
+  position: absolute;
+  left: 200px;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 1px solid #e0e6ed;
+  z-index: 10
+}
+
+.el-table__column-filter-trigger {
+  display: inline-block;
+  line-height: 34px;
+  margin-left: 5px;
+  cursor: pointer
+}
+
+.el-table__column-filter-trigger i {
+  color: #99a9bf
+}
+
+.el-table--enable-row-transition .el-table__body td {
+  transition: background-color .25s ease
+}
+
+.el-table--enable-row-hover tr:hover>td {
+  background-color: #eff2f7
+}
+
+.el-table--fluid-height .el-table__fixed,
+.el-table--fluid-height .el-table__fixed-right {
+  bottom: 0;
+  overflow: hidden
+}

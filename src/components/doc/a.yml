@@ -1,0 +1,45 @@
+
+  |—.gitignore              # 忽略文件,比如 node_modules
+  |
+  |—README.md               # 项目说明
+  |
+  |—webpack.config.js       # webpack配置
+  |
+  |—gulpfile.js             # gulp配置
+  |
+  |—server.js               # node服务器
+  |
+  |—package.json 		    # 项目配置
+  |
+  |—server.js 		        # node服务器
+  |
+  |—index.html             # 应该入口页面
+  |
+  |—dist                    # 打包完的文件会自动放在这里
+  |
+  |—node_modules 		    # node依赖包
+  |
+  |—mockjax.js             # 本地接口模拟依赖库
+  |
+  |—mockapi.js             # 本地接口模拟
+  |
+  |—src
+      |—main.js            # 启动配置，路由验证
+      |
+      |—routers.js         # 路由配置
+      |
+      |—assets             # 静态文件
+      |
+      |—components         # 组件
+      |
+      |—libs               # 放置一些工具函数、自定义过滤器
+      |
+      |—plugins            # 插件
+      |
+      |—views              # 视图
+            |
+            |—App.vue      # 入口文件
+      |
+      |—vuex               # 状态管理架构
+
+

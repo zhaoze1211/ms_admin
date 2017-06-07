@@ -1,0 +1,25 @@
+component:
+x-sendmsg
+
+about:
+  发送消息
+
+author:
+ bob
+
+
+
+事件名称     说明                 回调参数
+send   发送消息触发的事件          msg(object):   type(消息类型，普通信息"text"，文件信息"file"),  content(消息内容)
+
+其他
+    支持slot（name="toolbar"） 传入工具栏内容
+
++ 示例
+<template>
+  <div>
+    <el-sendmsg @send="send">
+        <span style="float: right;" slot="toolbar">123</span>
+    </el-sendmsg>
+  </div>
+</template>

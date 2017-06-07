@@ -1,0 +1,31 @@
+component:
+第一行：左边数量  右边文字
+第二行：内容
+
+可以参考机器人pc tag页面的history
+
+about:
+  
+author:
+ ice-yy
+  
+  
++ Attributes
+
+'id',
+'num',   // 第一行左边文字   返回的是‘共num个群收到’  如果没有num则显示oneLeft字段
+'oneLeft',  //   第一行左边文字   
+'oneRight', //  第一行右边文字   
+'content', // 第二行：内容
+
++ 示例
+<template>
+  <div>
+    <x-history 
+        v-for='o in historyList'
+        :num='o.number'
+        :oneRight='o.time'
+        :content='o.content'>
+    </x-history>
+  </div>
+</template>

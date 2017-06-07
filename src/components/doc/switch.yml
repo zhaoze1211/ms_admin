@@ -1,0 +1,84 @@
+component:
+¶ Switch 开关
+
+
+about:
+表示两种相互对立的状态间的切换，多用于触发「开/关」。
+    
+author:
+  
+¶ Attributes
+参数                                  说明                                          类型                                  可选值                 默认值
+disabled        是否禁用                                     boolean           —        false
+width           switch 的宽度（像素）        number            —        58（有文字）/ 46（无文字）
+
+on-icon-class   switch 打开时所显示图        string            —           —
+                                        标的类名，设置此项会忽略
+                on-text             
+off-icon-class  switch 关闭时所显示图标   string             —           —
+                                        的类名，设置此项会忽略 
+                off-text  
+                  
+on-text switch  打开时的文字                              string             —         ON
+off-text        switch 关闭时的文字             string             —         OFF
+on-color        switch 打开时的背景色          string             —         #20A0FF
+off-color       switch 关闭时的背景色          string             —         #C0CCDA
+name            switch 对应的 name 属性     string             —          —
+
+
+¶ Events
+事件名称    说明  回调参数
+change  switch 状态发生变化时的回调函数 新状态的布尔值
+
+
+
+示例
+基本用法
+绑定v-model到一个Boolean类型的变量。可以使用on-text属性与off-text属性来设置开关的文字描述，使用on-color属性与off-color属性来设置开关的背景色。
+<el-switch
+  v-model="value1"
+  on-text=""
+  off-text="">
+</el-switch>
+<el-switch
+  v-model="value2"
+  on-color="#13ce66"
+  off-color="#ff4949">
+</el-switch>
+
+<script>
+  export default {
+    data() {
+      return {
+        value1: true,
+        value2: true
+      }
+    }
+  };
+</script>
+
+
+
+
+禁用状态
+设置disabled属性，接受一个Boolean，设置true即可禁用。
+<el-switch
+  v-model="value3"
+  on-text=""
+  off-text=""
+  disabled>
+</el-switch>
+<el-switch
+  v-model="value3"
+  disabled>
+</el-switch>
+
+<script>
+  export default {
+    data() {
+      return {
+        value3: true
+      }
+    }
+  };
+</script>

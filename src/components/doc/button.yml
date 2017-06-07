@@ -1,0 +1,36 @@
+component:
+Button 按钮
+
+about:
+  按鈕
+  
+author:
+ ice-yy
+  
+  
+Attributes
+
+参数                      说明                                              类型                       可选值                                                                                                默认值
+size        尺寸                                             string      large,small,mini                            —
+type        类型                                             string      primary,success,warning,danger,info,text    —
+plain       是否朴素按钮                              Boolean     true,false                                 false
+disabled    禁用                                             boolean     true, false                                false
+icon        图标，已有的图标库中的图标名  string       —                                         —
+autofocus   是否默认聚焦                              boolean       —                                        false
+native-type 原生 type 属性                        string      button,submit,reset                        button
+
+
++ 示例
+<template>
+  <div>
+    <el-button type="primary" icon="search">搜索</el-button>
+    
+    <el-button-group>
+        <el-button type="primary" icon="arrow-left">上一页</el-button>
+        <el-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></el-button>
+    </el-button-group>
+    
+    <el-button type="primary" :loading="true">加载中</el-button>
+
+  </div>
+</template>

@@ -1,0 +1,56 @@
+@charset "UTF-8";
+.x-card{
+  .pore{
+    position: relative;
+    .image {
+        width: 100%;
+        display: block;
+    }
+    .btn{
+        display: none;
+    }
+    
+  }
+  .text--red {
+    color: #FF6C60;
+  }
+  .text--gray {
+     color: #797979;
+  }
+  .nowrap {
+    height: 38px;
+    overflow: hidden;
+  }
+  .bold{
+      font-weight: bold;
+  }
+}
+.hovershow .x-card .pore:hover{
+    .msk{
+         position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        background: #000;
+    }
+    .btn{
+        display: block;
+    }
+}
+.x-card2{
+  background: #fff;
+  .image {
+    width: 100%;
+    display: block;
+  }
+  .nowrap {
+    height: 38px;
+    overflow: hidden;
+  }
+  .right{
+    padding-top: 15px;
+    .el-button{min-width: 116px;margin: 0px 3px;}
+  }
+}

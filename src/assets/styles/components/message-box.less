@@ -1,0 +1,184 @@
+@charset "UTF-8";
+@import "../common/var.less";
+.v-modal-enter {
+    -webkit-animation: v-modal-in 0.2s ease;
+    animation: v-modal-in 0.2s ease;
+}
+.v-modal-leave {
+    -webkit-animation: v-modal-out 0.2s ease forwards;
+    animation: v-modal-out 0.2s ease forwards;
+}
+@-webkit-keyframes v-modal-in {
+    0% {
+        opacity: 0;
+    }
+}
+@keyframes v-modal-in {
+    0% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes v-modal-out {
+    to {
+        opacity: 0;
+    }
+}
+@keyframes v-modal-out {
+    to {
+        opacity: 0;
+    }
+}
+.v-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: #000;
+}
+.el-message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: #fff;
+    width: 420px;
+    margin-left: -210px;
+    margin-top: -90px;
+    border-radius: 3px;
+    font-size: 16px;
+    -webkit-user-select: none;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.el-message-box__header {
+    padding: 20px 20px 0;
+}
+.el-message-box__content {
+    padding: 30px 20px;
+    color: #475669;
+    font-size: 14px;
+    position: relative;
+}
+.el-message-box__close {
+    display: inline-block;
+    position: absolute;
+    top: 19px;
+    right: 20px;
+    color: #999;
+    cursor: pointer;
+    line-height: 20px;
+    text-align: center;
+}
+.el-message-box__close:hover {
+    color: @color-primary;
+}
+.el-message-box__input {
+    padding-top: 15px;
+}
+.el-message-box__input input.invalid,
+.el-message-box__input input.invalid:focus {
+    border-color: @color-danger;
+}
+.el-message-box__errormsg {
+    color: red;
+    font-size: 12px;
+    min-height: 18px;
+    margin-top: 2px;
+}
+.el-message-box__title {
+    padding-left: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 700;
+    height: 18px;
+    color: #333;
+}
+.el-message-box__message {
+    margin: 0;
+}
+.el-message-box__message p {
+    margin: 0;
+    line-height: 1.4;
+}
+.el-message-box__btns {
+    padding: 11px 20px 15px;
+    text-align: right;
+}
+.el-message-box__btns button:nth-child(2) {
+    margin-left: 10px;
+}
+.el-message-box__btns-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
+.el-message-box__status {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 36px!important;
+}
+.el-message-box__status.el-icon-circle-check {
+    color: @color-success;
+}
+.el-message-box__status.el-icon-information {
+    color: @color-info;
+}
+.el-message-box__status.el-icon-warning {
+    color: @color-warning;
+}
+.el-message-box__status.el-icon-circle-cross {
+    color: @color-danger;
+}
+.msgbox-fade-enter-active {
+    -webkit-animation: msgbox-fade-in 0.3s;
+    animation: msgbox-fade-in 0.3s;
+}
+.msgbox-fade-leave-active {
+    -webkit-animation: msgbox-fade-out 0.3s;
+    animation: msgbox-fade-out 0.3s;
+}
+@-webkit-keyframes msgbox-fade-in {
+    0% {
+        transform:translate3d(0,-20px,0);
+        opacity: 0;
+    }
+    100% {
+        transform:translateZ(0);
+        opacity: 1;
+    }
+}
+@keyframes msgbox-fade-in {
+    0% {
+        transform:translate3d(0,-20px,0);
+        opacity: 0;
+    }
+    100% {
+        transform:translateZ(0);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes msgbox-fade-out {
+    0% {
+        transform:translateZ(0);
+        opacity: 1;
+    }
+    100% {
+        transform:translate3d(0,-20px,0);
+        opacity: 0;
+    }
+}
+@keyframes msgbox-fade-out {
+    0% {
+        transform:translateZ(0);
+        opacity: 1;
+    }
+    100% {
+        transform:translate3d(0,-20px,0);
+        opacity: 0;
+    }
+}

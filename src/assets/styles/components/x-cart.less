@@ -1,0 +1,81 @@
+@import "../common/var.less";
+.rcart{
+  position: relative;
+  font-size: 12px;
+  padding-top: 10px;
+  .el-table {
+    font-size: 12px;
+  }
+  .el-table .cell{
+    padding: 15px 10px;
+  }
+  .ctimg{
+    height: 80px;
+    width: 80px;
+  }
+  .ct-ft{
+    height: 150px;
+    padding: 25px 20px 25px 10px;
+    border: 1px solid #e0e6ed;
+  }
+  .ft-right{
+    float: right;
+    text-align: right;
+    line-height: 28px;
+    span{
+      color: @color-theme;
+      display: inline-block;
+      width: 130px;
+    }
+    .total{
+      font-weight: bold;
+      font-size: 16px;
+
+      span{
+        font-size:22px;
+      }
+    }
+  }
+  label input{
+    margin-right: 6px;
+    vertical-align:bottom;
+  }
+  .topck{
+    position: absolute;
+    left: 10px;
+    top: 68px;
+    font-weight: bold;
+  }
+  .ct-over{
+    color: @color-theme;
+  }
+  .dltmul{
+    margin-left: 10px;
+  }
+  h2{
+    font-size: 22px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+  .ct-null{
+    background: url("../../images/x-cartnull.jpg") no-repeat scroll 400px 185px;
+    height: 400px;
+    padding: 186px 10px 10px 500px;
+    font-size: 14px;
+    line-height: 1.8;
+    .clr-blue{
+      font-size: 16px;
+    }
+  }
+  .btn-block{
+    padding: 30px;
+    text-align: right;
+    .el-button{
+      min-width: 150px;
+      margin: 0px 10px;
+    }
+  }
+  .cursor{
+    cursor: pointer;
+  }
+}
