@@ -31,7 +31,7 @@ const router = new VueRouter({
         if (savedPosition) {
             return savedPosition;
         } else {
-            return {x: 0, y: 0};
+            return {x: 0,y: 0 };
         }
     }
 });
@@ -42,15 +42,15 @@ utils.checkUser();
 router.beforeEach((to, from, next) => {
     utils.loadingShow();
     //登录验证
-    if (!store.state.user && utils.getSession("adminuser") && utils.getSession("adminuser") != undefined && utils.getSession("adminuser") != "undefined") {
-        let u = utils.getSession("adminuser") ? JSON.parse(utils.getSession("adminuser")) : ""
-        store.commit("UPDATE_USER", u);
+    if(!store.state.user && utils.getSession("adminuser") && utils.getSession("adminuser") != undefined && utils.getSession("adminuser") != "undefined"){
+        let u = utils.getSession("adminuser")?JSON.parse(utils.getSession("adminuser")):""
+        store.commit("UPDATE_USER",u);
     }
     if (to.matched.some(record => record.meta.auth)) {
         if (!store.state.user) {
             next({
                 name: 'login',
-                query: {redirect: to.fullPath}
+                query: { redirect: to.fullPath }
             })
         } else {
             next()
@@ -61,7 +61,7 @@ router.beforeEach((to, from, next) => {
     //登录验证 end
 });
 router.afterEach(route => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0,0);
     utils.loadingHide();
 });
 

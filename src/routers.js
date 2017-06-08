@@ -116,5 +116,44 @@ exports.routes = [
                 }
             }
         ]
+    },
+    {
+        //商品管理
+        path: "/goods",
+        name: "goods",
+        component: function (resolve) {
+            require(['./views/goods/index.vue'], resolve);
+        },
+        children: [
+            {
+                path: 'goods',   //我的账户
+                name: 'goods',
+                meta: {
+                    auth: true
+                },
+                component: function (resolve) {
+                    require(['./views/goods/goods.vue'], resolve);
+                }
+            },
+            {
+                path: 'goodsList',   //结算明细
+                name: 'goodsList',
+                meta: {
+                    auth: true
+                },
+                component: function (resolve) {
+                    require(['./views/goods/goodsList.vue'], resolve);
+                }
+            },{
+                path: 'goodsClass',   //申请提现
+                name: 'goodsClass',
+                meta: {
+                    auth: true
+                },
+                component: function (resolve) {
+                    require(['./views/goods/goodsClass.vue'], resolve);
+                }
+            }
+        ]
     }
 ];

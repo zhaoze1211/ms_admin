@@ -300,7 +300,7 @@
                                 that.bindCardForm.company_name = json.company_name;
                                 that.bindCardForm.buslince = json.buslince;
 
-                                that.bindCardForm.bank = {value: json.bank_code, label: json.bank_name};
+                                that.bindCardForm.bank ={value: json.bank_code, label: json.bank_name};
 //                                that.bindCardForm.province = {};
 //                                that.bindCardForm.city = {};
 //                                that.bindCardForm.subBank = {};
@@ -342,6 +342,7 @@
         methods: {
             //选择银行
             bank_nameChange(obj){
+                console.log(obj);
                 //重置
                 this.showProvince = false;
                 setTimeout(() => {

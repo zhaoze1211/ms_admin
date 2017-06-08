@@ -15,8 +15,8 @@
             <el-submenu index="2">
                 <template slot="title"><i class="el-icon-menu"></i>商品管理</template>
                 <el-menu-item-group>
-                    <el-menu-item index="/4">订单列表</el-menu-item>
-                    <el-menu-item index="/3">维权订单</el-menu-item>
+                    <el-menu-item index="/goods/goodsList">商品列表</el-menu-item>
+                    <el-menu-item index="/goods/goodsClass">商品分类</el-menu-item>
                 </el-menu-item-group>
             </el-submenu>
             <el-submenu index="3">

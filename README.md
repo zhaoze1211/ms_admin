@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #基于Vue2.0搭建的前端组件化单页面应用
 
 ###安装
@@ -42,6 +41,3 @@ npm run dist
 └── webpack.constants.js  // Webpack 配置文件
 </pre>
 
-=======
-# ms_admin
->>>>>>> 80d0e31a8cee1ca572d1cb726cafb04fa5e003aa
